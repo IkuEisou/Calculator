@@ -10,9 +10,17 @@ import Foundation
 import RealmSwift
 
 class User: Object {
+    //用户ID
+    @objc dynamic var id = "000";
+    
     //用户名
     @objc dynamic var name = "test";
     
     //密码
     @objc dynamic var passwd = "001";
+    
+    //设置主键
+    override static func primaryKey() -> String? {
+        return "id"
+    }
 }

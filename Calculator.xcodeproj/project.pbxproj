@@ -17,6 +17,9 @@
 		3B225F94224770EE00745EC5 /* CalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B225F93224770EE00745EC5 /* CalculatorUITests.swift */; };
 		3BBFE5762258E4F3002A0D50 /* Page2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BBFE5752258E4F3002A0D50 /* Page2ViewController.swift */; };
 		3BE08ABF224F9ED000BFBAB1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE08ABE224F9ED000BFBAB1 /* User.swift */; };
+		3BE981C1225C317800E53CE2 /* CalculatePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE981C0225C317800E53CE2 /* CalculatePresenter.swift */; };
+		3BE981C3225C341D00E53CE2 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE981C2225C341D00E53CE2 /* LoginPresenter.swift */; };
+		3BE981C5225C37FB00E53CE2 /* CalResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BE981C4225C37FB00E53CE2 /* CalResult.swift */; };
 		CAE06C6480D58672305E7F04 /* Pods_Calculator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FD9826CEF229BC6BF6ED13A /* Pods_Calculator.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +62,9 @@
 		3BE08AC0224FAB1000BFBAB1 /* Pods_Calculator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Calculator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BE08AC3224FAB1000BFBAB1 /* Realm.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Realm.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BE08AC6224FAB1000BFBAB1 /* RealmSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BE981C0225C317800E53CE2 /* CalculatePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatePresenter.swift; sourceTree = "<group>"; };
+		3BE981C2225C341D00E53CE2 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		3BE981C4225C37FB00E53CE2 /* CalResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalResult.swift; sourceTree = "<group>"; };
 		41278B676E3AE14B35144143 /* Pods-Calculator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Calculator.release.xcconfig"; path = "Target Support Files/Pods-Calculator/Pods-Calculator.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,6 +131,9 @@
 				3B225F7F224770EE00745EC5 /* Info.plist */,
 				3B225F77224770EC00745EC5 /* Calculator.xcdatamodeld */,
 				3BE08ABE224F9ED000BFBAB1 /* User.swift */,
+				3BE981C0225C317800E53CE2 /* CalculatePresenter.swift */,
+				3BE981C2225C341D00E53CE2 /* LoginPresenter.swift */,
+				3BE981C4225C37FB00E53CE2 /* CalResult.swift */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -350,8 +359,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				3BE08ABF224F9ED000BFBAB1 /* User.swift in Sources */,
+				3BE981C5225C37FB00E53CE2 /* CalResult.swift in Sources */,
 				3B225F73224770EC00745EC5 /* ViewController.swift in Sources */,
+				3BE981C3225C341D00E53CE2 /* LoginPresenter.swift in Sources */,
 				3B225F71224770EC00745EC5 /* AppDelegate.swift in Sources */,
+				3BE981C1225C317800E53CE2 /* CalculatePresenter.swift in Sources */,
 				3BBFE5762258E4F3002A0D50 /* Page2ViewController.swift in Sources */,
 				3B225F79224770EC00745EC5 /* Calculator.xcdatamodeld in Sources */,
 			);

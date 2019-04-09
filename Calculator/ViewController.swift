@@ -7,57 +7,31 @@
 //
 
 import UIKit
-import RealmSwift
 
 class ViewController: UIViewController {
     @IBOutlet weak var inputUser: UITextField!
     @IBOutlet weak var inputPass: UITextField!
+    var userID: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //使用默认的数据库
-        do {
-            let realm = try Realm()
-        //查询所有的记录
-        let users = realm.objects(User.self)
-        //已经有记录的话就不插入
-        if users.count>0 {
-            return
-        }
-        
-        //初始化用户
-        let userDefault = User()
-                
-        // 数据持久化操作
-        try! realm.write {
-            realm.add(userDefault)
-        }
-        
-        //打印出数据库地址
-        print(realm.configuration.fileURL ??  "No database")
-        } catch let error as NSError {
-            print(error.localizedFailureReason ?? "Unkowned Error")
-        }
-
-        }
-
+        LoginPresenter.initUser()
+    }
+    
     @IBAction func onClickLogin(_ sender: UIButton) {
-        //使用默认的数据库
-        let realm = try! Realm()
-        //查询所有的记录
-        let users = realm.objects(User.self)
+        self.userID = LoginPresenter.auth(inputUser.text ?? "", inputPass.text ?? "")
         
-        if users.count>0 {
-            let defName = users[0].name
-            let defPass = users[0].passwd
-            
-            if(inputUser.text == defName &&
-                inputPass.text == defPass){
-                self.performSegue(withIdentifier: "login", sender: self)
-            }
+        if(userID != ""){
+            self.performSegue(withIdentifier: "login", sender: self)
         }
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "login" {
+            let secondViewController: Page2ViewController = segue.destination as! Page2ViewController
+            secondViewController.userID = self.userID
+        }
+    }
 }
 

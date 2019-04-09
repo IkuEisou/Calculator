@@ -9,14 +9,15 @@
 import UIKit
 
 class Page2ViewController: UIViewController {
-
     @IBOutlet weak var displayer: UILabel!
+
+    var userID: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.displayer.text = CalculatePresenter.getResult(usrID: self.userID)
     }
+    
     @IBAction func clear(_ sender: UIButton) {
         self.displayer.text = "0"
     }
@@ -30,6 +31,16 @@ class Page2ViewController: UIViewController {
         }
 
         self.displayer.text = "\(before ?? "")\(num ?? "")"
+    }
+    
+    @IBAction func onClickSave(_ sender: UIButton) {
+        let res: String =  self.displayer.text ?? ""
+        CalculatePresenter.saveResult(res, self.userID)
+    }
+    
+    @IBAction func onClickDelete(_ sender: UIButton) {
+        let res: String =  self.displayer.text ?? ""
+        CalculatePresenter.delResult(res, self.userID)
     }
     
     /*
